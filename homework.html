@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Week 5 Reygan</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["poppins"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-poppins bg-gradient-to-r from-blue-500 to-cyan-500">
+    <div class="w-1/2 mx-auto py-10">
+      <div class="">
+        <ul class="flex">
+          <li class="-mb-px mr-1">
+            <a
+              href="#"
+              class="bg-white inline-block py-2 px-4 font-semibold border border-b-0 rounded-t hover:bg-gray-200"
+              >Registrasi</a
+            >
+          </li>
+          <li class="-mb-px mr-1">
+            <a
+              href="#"
+              class="bg-white inline-block py-2 px-4 font-semibold border border-b-0 rounded-t hover:bg-gray-200"
+              >List Pendaftar</a
+            >
+          </li>
+        </ul>
+        <div class="bg-white p-4 rounded">
+          <div class="tab-content">
+            <!-- konten tabs 1 halaman form -->
+            <div class="flex-auto px-32 py-24">
+              <h1 class="text-2xl font-bold text-center pb-10">Registrasi</h1>
+              <label for="">Nama</label>
+              <input
+                id="input-name"
+                type="text"
+                class="block px-2 py-2 my-2 rounded-t border w-full"
+              />
+              <label for="">Umur</label>
+              <input
+                id="input-age"
+                type="text"
+                class="block px-2 py-2 my-2 rounded-t border w-full"
+              />
+              <label for="">Uang Saku</label>
+              <input
+                id="input-salary"
+                type="text"
+                class="block px-2 py-2 my-2 rounded-t border w-full"
+              />
+              <button
+                id="submit-button"
+                class="w-full py-2 rounded mt-4 bg-green-500 text-white"
+              >
+                Kirim
+              </button>
+            </div>
+          </div>
+          <!-- konten tabs 2 list pendaftar-->
+          <div class="hidden tab-content">
+            <table class="table-auto w-full border border-gray-400">
+              <thead class="bg-gray-200">
+                <tr>
+                  <th class="px-4 py-2">NO</th>
+                  <th class="px-4 py-2">NAMA</th>
+                  <th class="px-4 py-2">UMUR</th>
+                  <th class="px-4 py-2">UANG SANGU</th>
+                  <th class="px-4 py-2">AKSI</th>
+                </tr>
+              </thead>
+              <tbody id="table-body" class="text-center"></tbody>
+            </table>
+            <div><h1 id="average-info" class="py-4"></h1></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="homework.js"></script>
+  </body>
+</html>
